@@ -11,15 +11,16 @@ const handleClick = () => {
   
     }
 
-    function handleChange(){
-        setPlayerName();
+    function handleChange(e){
+        console.log(e.target.value);
+        setPlayerName(e.target.value);
     }
 
-    let editableName = <span className="player-name">{initialName}</span>;
+    let editableName = <span className="player-name">{playerName}</span>;
     let buttonName = "Edit" ;
 
     if(IsEditing){
-        editableName = <input type="text" required value={initialName}/>;
+        editableName = <input type="text" required value={playerName} onChange={handleChange}/>;
          buttonName = "Save";
     }
    
