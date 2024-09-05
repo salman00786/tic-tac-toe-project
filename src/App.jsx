@@ -29,11 +29,11 @@ function App() {
               <Player initialName={"Player 2"} symbol={"O"} isActive={activePlayer === "O"}/>
           </ol>
 
-          <GameBoard onSelectSquare = {handleSelectSquare} activePlayerSymbol = {activePlayer}/>
-          <Log/>
+          <GameBoard onSelectSquare = {handleSelectSquare} turns = {gameTurns}/>
+          
       </div>
-
-      LOG
+      <Log turns={gameTurns}/>
+      
     </main>
   )
 }
